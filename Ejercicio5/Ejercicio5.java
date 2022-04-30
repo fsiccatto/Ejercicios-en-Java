@@ -51,6 +51,9 @@ import javax.swing.JOptionPane;
     }
     */
 
+
+
+
 //Ejercicio2: Construir un programa que dada una serie de vehiculos caracterizzados por su marca, modelo y precio, imprima las propiedades del vehiculo mas barato. Para ello, se deberan leer por teclado las caracteristicas de cada vehiculo y crear una clase que represente a cada uno de ellos.
 
     /* public class Ejercicio5 {
@@ -58,7 +61,7 @@ import javax.swing.JOptionPane;
         private String modelo;
         private float precio;
 
-        public Ejercicio5(String marca, String modelo, float precio){
+        public Ejercicio5 (String marca, String modelo, float precio){
             this.marca = marca;
             this.modelo = modelo;
             this.precio = precio;
@@ -134,4 +137,94 @@ import javax.swing.JOptionPane;
         }
     } */
 
-//
+
+
+
+//Ejercio 3: Diseñar un programa para trabajar triangulos isosceles. Para ello defina los atributos necesarios que se requieren, proporcione metodos de consulta, un metodoo constructor e implemente metodos para calcular el perimetro y el area de un triangulo que a partir de un arreglo de triangulos devuleva el area del triangulo de mayor superficie.
+
+    /* public class Ejercicio5 {
+        private double base;
+        private double lado;
+
+        public Ejercicio5(Double base, Double lado) {
+            this.base = base;
+            this.lado = lado;
+        }
+
+        public String mostrarDatos() {
+            return "Base: " + base + "\nLado: " + lado + "\nArea: " + getArea() + "\nPerimetro: " + getPerimetro();
+        }
+
+        public double getArea() {
+            double area = (base / 4) * Math.sqrt(4 * (Math.pow(lado, 2)) - Math.pow(base, 2));
+            return area;
+        }
+
+        public double getPerimetro() {
+            double perimetro = 2 * lado + base;
+            return perimetro;
+        }
+
+        //Buscamos el triangulo de mayor area
+        public static int trianguloMayorArea(Ejercicio5 triangulo[]) {
+            int posicion = 0;
+            double area;
+
+            area = triangulo[0].getArea();
+            for (int i = 1; i < triangulo.length; i++) {
+                if (triangulo[i].getArea() > area) {
+                    area = triangulo[i].getArea();
+                    posicion = i;
+                }
+            }
+            return posicion;
+        }
+
+        public static void main(String[] args) {
+            double base, lado;
+            int cantidadTriangulos, posicionTrianguloMayorArea;
+            
+            Scanner entrada = new Scanner(System.in);
+            try {
+                System.out.println("TRIANGULO ISOSCELES");
+                System.out.print("Ingrese la cantidad de triangulos isosceles: ");
+                cantidadTriangulos = entrada.nextInt();
+
+                Ejercicio5[] triangulosIsosceles = new Ejercicio5[cantidadTriangulos];
+
+                //Pedimos base y lado
+                for (int i = 0; i < triangulosIsosceles.length; i++) {
+                    System.out.println("Ingrese base < lado");
+                    do {
+                        System.out.print("Ingrese la base del " + (i + 1) + "º triangulo: ");
+                        base = entrada.nextDouble();
+                        System.out.print("Ingrese el lado del " + (i + 1) + "º triangulo: ");
+                        lado = entrada.nextDouble();
+                    } while (base > lado);
+
+                    triangulosIsosceles[i] = new Ejercicio5(base, lado);
+                    System.out.print("\n");
+                }
+
+                //Mostramos el triangulo de mayor area
+                posicionTrianguloMayorArea = trianguloMayorArea(triangulosIsosceles);
+                System.out.println("El triangulo de mayor area es: ");
+                System.out.print(triangulosIsosceles[posicionTrianguloMayorArea].getArea());
+
+                //Mostramos los otros triangulos
+                for (int i = 0; i < triangulosIsosceles.length; i++) {
+                    if (i == posicionTrianguloMayorArea) {
+                        continue;
+                    } else {
+                        System.out.print(triangulosIsosceles[i].mostrarDatos());
+                    }
+                }
+            } finally {
+                entrada.close();
+            }
+        }
+    }*/
+
+
+
+    
