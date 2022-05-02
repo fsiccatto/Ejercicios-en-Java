@@ -1,6 +1,10 @@
+import java.io.ObjectInputStream.GetField;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import javax.swing.JOptionPane;
+
+import Poligono.Poligono;
 
 //Ejercicio1: Construir un programa que calcula el area y el perimetro de un cuadrilatero dada la longitud de sus dos lados. Los valores de la longitud deberan introducirse por linea de ordenes. Si es un cuadrado, solo se proporcionara la longitud de unos de los lados al constructor.
 
@@ -227,4 +231,18 @@ import javax.swing.JOptionPane;
 
 
 
-    
+//Ejercicio 4: Hacer un programa que calcule el area de poliginos (Triangulos y Rectangulos). El program a debe ser caapz de almacenar en un arreglo N triangulos y rectangulos, y al final mostrar el area y los datos de cada uno. Para ello se tendra:
+    //Una superclase llamda Poligono, con dos sublcases Rect y Triang
+
+
+
+public abstract class Ejercicio5 {
+    // Importamos ArrayList para poder trabajar con arreglos.
+    // Es un arreglo de tipo dinamico.
+    static ArrayList<Poligono> poligonos = new ArrayList<Poligono>();
+
+    public static void main(String[] args) {
+         
+    }
+}
+
