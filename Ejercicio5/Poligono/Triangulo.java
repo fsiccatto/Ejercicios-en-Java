@@ -25,7 +25,6 @@ public class Triangulo extends Poligono {
         double semiPerimetro = (lado1 + lado2 + lado3) / 2;
         double area = Math.sqrt(semiPerimetro * (semiPerimetro - lado1) * (semiPerimetro - lado2) * (semiPerimetro - lado3));
         return area;
-        
     }
 
     @Override

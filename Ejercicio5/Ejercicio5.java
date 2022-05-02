@@ -2,9 +2,12 @@ import java.io.ObjectInputStream.GetField;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import javax.script.ScriptEngineManager;
 import javax.swing.JOptionPane;
 
 import Poligono.Poligono;
+import Poligono.Rectangulo;
+import Poligono.Triangulo;
 
 //Ejercicio1: Construir un programa que calcula el area y el perimetro de un cuadrilatero dada la longitud de sus dos lados. Los valores de la longitud deberan introducirse por linea de ordenes. Si es un cuadrado, solo se proporcionara la longitud de unos de los lados al constructor.
 
@@ -234,15 +237,91 @@ import Poligono.Poligono;
 //Ejercicio 4: Hacer un programa que calcule el area de poliginos (Triangulos y Rectangulos). El program a debe ser caapz de almacenar en un arreglo N triangulos y rectangulos, y al final mostrar el area y los datos de cada uno. Para ello se tendra:
     //Una superclase llamda Poligono, con dos sublcases Rect y Triang
 
+    /* public abstract class Ejercicio5 {
+        // Importamos ArrayList para poder trabajar con arreglos.
+        // Es un arreglo de tipo dinamico.
+        static ArrayList<Poligono> poligonos = new ArrayList<Poligono>();
+        static Scanner entrada = new Scanner(System.in);
 
+        public static void main(String[] args) {
+            //Llenar poligono
+            llenarPoligono();
 
-public abstract class Ejercicio5 {
-    // Importamos ArrayList para poder trabajar con arreglos.
-    // Es un arreglo de tipo dinamico.
-    static ArrayList<Poligono> poligonos = new ArrayList<Poligono>();
+            //Mostramos poligonos
+            mostrarPoligonos();
+        }
 
-    public static void main(String[] args) {
-         
-    }
-}
+        public static void llenarPoligono() {
+            int opcion;
+            char respuesta;
+            do {
+                do {
+                    System.out.println("Digite el poligono que desee crear");
+                    System.out.println("1. Triangulo");
+                    System.out.println("2. Rectangulo");
+                    System.out.println("3. Salir");
+                    System.out.print("Digite una opcion: ");
+                    opcion = entrada.nextInt();
+                } while (opcion < 1 || opcion > 3);
+
+                switch (opcion) {
+                    case 1://Triangulo
+                        llenarTriangulo();
+                        break;
+                    case 2://Rectangulo
+                        llenarRectangulo();
+                        break;
+                    case 3://Salir
+                        System.out.println("Saliendo...");
+                        break;
+                    // default: //Opcion no valida
+                    //     System.out.println("Opcion no valida");
+                    //     break;
+                }
+                System.out.println("Desea crear otro poligono? (S/N)");
+                respuesta = entrada.next().charAt(0);
+                System.out.println("\n");
+            } while (respuesta == 'S' || respuesta == 's');
+        }
+
+        public static void llenarTriangulo() {
+            double lado1, lado2, lado3;
+
+            System.out.println("\nTRIANGULO");
+            System.out.println("Ingrese los lados del triangulo");
+            System.out.print("Lado 1: ");
+            lado1 = entrada.nextDouble();
+            System.out.print("Lado 2: ");
+            lado2 = entrada.nextDouble();
+            System.out.print("Lado 3: ");
+            lado3 = entrada.nextDouble();
+
+            //Creamos y guardamos el triangulo
+            Triangulo triangulo = new Triangulo(lado1, lado2, lado3);
+            poligonos.add(triangulo);
+        }
+
+        public static void llenarRectangulo() {
+            double lado1, lado2;
+
+            System.out.println("\nRECTANGULO");
+            System.out.println("Ingrese los lados del rectangulo");
+            System.out.print("Lado 1: ");
+            lado1 = entrada.nextDouble();
+            System.out.print("Lado 2: ");
+            lado2 = entrada.nextDouble();
+
+            //Creamos y guardamos el rectangulo
+            Rectangulo rectangulo = new Rectangulo(lado1, lado2);
+            poligonos.add(rectangulo);
+        }
+
+        public static void mostrarPoligonos() {
+            //Recorremos el arreglo de poligonos con un for each
+            for (Poligono poli : poligonos) {
+                System.out.println(poli.toString()); //Nos muestra el area tambien
+                System.out.println("\n");
+            }
+        }
+    } */
 
