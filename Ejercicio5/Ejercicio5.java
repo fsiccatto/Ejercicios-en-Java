@@ -1,13 +1,12 @@
-import java.io.ObjectInputStream.GetField;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import javax.script.ScriptEngineManager;
 import javax.swing.JOptionPane;
 
-import Poligono.Poligono;
-import Poligono.Rectangulo;
-import Poligono.Triangulo;
+// import Poligono.Poligono;
+// import Poligono.Rectangulo;
+// import Poligono.Triangulo;
 
 //Ejercicio1: Construir un programa que calcula el area y el perimetro de un cuadrilatero dada la longitud de sus dos lados. Los valores de la longitud deberan introducirse por linea de ordenes. Si es un cuadrado, solo se proporcionara la longitud de unos de los lados al constructor.
 
